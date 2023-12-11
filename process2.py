@@ -15,7 +15,6 @@ TOLLGURU_API_KEY = os.getenv('TOLLGURU_API_KEY')
 TOLLGURU_API_URL = os.getenv('TOLLGURU_API_URL')
 #print(TOLLGURU_API_KEY)
 
-#url = 'https://apis.tollguru.com/toll/v2/gps-tracks-csv-upload?mapProvider=osrm&vehicleType=5AxlesTruck'
 headers = {'x-api-key': TOLLGURU_API_KEY, 'Content-Type': 'text/csv'}
 csv_files = [f for f in os.listdir(args.to_process) if f.endswith('.csv')]
 

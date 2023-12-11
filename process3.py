@@ -17,7 +17,7 @@ for json_file in json_files:
     json_path = os.path.join(args.to_process, json_file)
     with open(json_path, 'r') as file:
         json_data = json.load(file)
-    #print(json_data['summary'].keys())
+
     if json_data['status']=="OK":
         temp = []
         temp.append(str(json_file).split("_")[0])
@@ -29,6 +29,3 @@ for json_file in json_files:
 #print(all_data)
 df = pd.DataFrame(all_data, columns = ['unit', 'tag_cost', 'cash_cost','license_plate_cost'])
 df.to_csv(result_csv)
-
-# Save the consolidated toll data to a CSV file
-#save_to_csv(all_toll_data, output_dir)
